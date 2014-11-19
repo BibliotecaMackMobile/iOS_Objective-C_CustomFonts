@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QMh-AO-ChY">
+                                <rect key="frame" x="134" y="28" width="332" height="29"/>
+                                <segments>
+                                    <segment title="FreePixel"/>
+                                    <segment title="TheCinthiaEdito"/>
+                                    <segment title="Mastoc"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeFont:" destination="vXZ-lx-hvc" eventType="valueChanged" id="7G6-RA-zBl"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom fonts are awesome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtT-49-M4s">
+                                <rect key="frame" x="0.0" y="256" width="600" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="aos-G8-BcY"/>
+                                    <constraint firstAttribute="width" constant="600" id="enl-Q1-9IF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GtT-49-M4s" secondAttribute="centerX" id="7es-jX-OFq"/>
+                            <constraint firstAttribute="centerY" secondItem="QMh-AO-ChY" secondAttribute="centerY" constant="258" id="CJk-vh-TJh"/>
+                            <constraint firstAttribute="centerX" secondItem="QMh-AO-ChY" secondAttribute="centerX" id="MZs-lW-vWY"/>
+                            <constraint firstAttribute="centerY" secondItem="GtT-49-M4s" secondAttribute="centerY" id="meL-YP-Ehc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fontLabel" destination="GtT-49-M4s" id="IoM-14-EZp"/>
+                        <outlet property="fontsSegmentedControl" destination="QMh-AO-ChY" id="liH-sU-vgz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
